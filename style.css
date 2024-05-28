@@ -138,3 +138,34 @@ html {
 }
 
 
+/* about */
+
+#about{
+    border: 2px solid red;
+    margin: 50px 0 50px 0;
+    width: 70vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* height: 80vh; */
+}
+
+.about-content{
+    width: 50%;
+    border: 2px solid green;
+}
+.about-heading{
+    font-size: 2.5rem;
+    font-weight: 600;
+    border: 2px solid cyan;
+}
+.about-text{
+    padding: 50px 0 0 0;
+    font-size: 1.1rem;
+}
+
+.about-svg{
+    height: 45vh;
+    border: 2px solid blue;
+    margin: 0 0 0 5vw; 
+}
