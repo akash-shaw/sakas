@@ -41,7 +41,7 @@
     </div>
     
     <div id="workflow">
-        <p class="workflow-heading heading"><span>Our&nbsp;</span><span>Workflow</span></p>
+        <p class="workflow-heading heading heading-right"><span>Our&nbsp;</span><span>Workflow</span></p>
 
         <div class="workflow-timeline">
             <div class="row">
@@ -142,7 +142,25 @@
             </div>
         </div>
     </div>
-    <div class="contact"></div>
+
+    <div id="contact">
+        <p class="contact-heading heading "><span>Contact</span><span>&nbsp;Us</span></p>
+        <form action data-aos=zoom name="contact" netlify>
+            <div class=inputBox>
+                <input aria-label="Enter Name" data-aos=fade-up placeholder=name>
+                <input aria-label="Enter message subject" data-aos=fade-up placeholder=subject type=text>
+            </div>
+            <div class=inputBox>
+                <input aria-label="Enter mobile number" data-aos=fade-up placeholder=number type=number>
+                <input aria-label="Enter email" data-aos=fade-up placeholder=email>
+            </div>
+            <textarea aria-label="Enter message" cols=30 data-aos=fade-up id name placeholder="your message"
+                      rows=10></textarea>
+            <div class="btn-container">
+                <input aria-label="Enter submit" class=btn type=submit value="send message">
+            </div>
+        </form>
+    </div>
     
     <footer></footer>
 </body>
