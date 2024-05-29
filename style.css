@@ -65,7 +65,8 @@ html {
 }
 
 .navbar.sticky {
-  background: transparent;
+  background: white;
+  /* backdrop-filter: blur(20px); */
   color: var(--primary-color);
   top: 0;
   left: 0;
@@ -287,4 +288,5 @@ html {
   border:10px solid transparent;
   border-top-color: var(--primary-color);
 }
+
 

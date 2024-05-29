@@ -1,12 +1,14 @@
-window.onscroll = function() {stickNavbar()};
+document.addEventListener('DOMContentLoaded', (event) => {
+  window.onscroll = function() {stickNavbar()};
 
-const navbar = document.getElementById("navbar");
-const sticky = navbar.offsetTop;
+  const navbar = document.getElementById("navbar");
+  const sticky = navbar.offsetTop;
 
-function stickNavbar() {
-  if (window.pageYOffset > sticky) {
-    navbar.classList.add("sticky");
-  } else {
-    navbar.classList.remove("sticky");
+  function stickNavbar() {
+      if (window.scrollY > sticky) {
+          navbar.classList.add("sticky");
+      } else {
+          navbar.classList.remove("sticky");
+      }
   }
-}
+});
