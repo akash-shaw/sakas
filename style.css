@@ -299,7 +299,7 @@ html {
 /* pricing */
 
 #pricing{
-  margin: 100px 0 0 0;
+  /* margin: 100px 0 0 0; */
   width: 70vw;
   border: 2px solid red;
 }
@@ -307,6 +307,7 @@ html {
   border: 2px solid red;
 }
 .pricing-container{
+  margin-top: 50px;
   display: flex;
   justify-content: center ;
 }
