@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.getElementById("navbar");
-    const navLinks = document.getElementById("navinks");
+    const navLinks = document.getElementById("nav-links");
     const hamburger = document.getElementById("hamburger");
     let sticky = navbar.offsetTop;
 
     // Toggle nav links on hamburger click
     hamburger.addEventListener('click', function() {
         navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active-ham');
+        hamburger.classList.toggle('active');
     });
 
     function stickNavbar() {
@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         if (window.innerWidth < 650) {
             navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
         }
     }
 

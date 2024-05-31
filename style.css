@@ -647,7 +647,7 @@ footer{
     transition: background-color 0.1s ease-out, color 0.1s ease-out;
   }
 
-  .hamburger.active-ham{
+  .hamburger.active{
     background-color: var(--primary-color);
     color: white;
   }
