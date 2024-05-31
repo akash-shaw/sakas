@@ -461,6 +461,10 @@ html {
 .plan-features li{
   margin: 10px 0 15px 0;
 }
+.plan-features li::marker {
+  content: "✔   "; /* Add custom marker content */
+  color: green; /* Change color of marker */
+}
 
 
 /* contact */
