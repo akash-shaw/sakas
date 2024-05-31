@@ -25,6 +25,7 @@ html {
   background-color: var(--bg-color-primary);
   /* background: linear-gradient(to bottom, #0d0d2b, #000000); */
   /* color: white; */
+  scroll-behavior: smooth;
 }
 
 /* colors */
