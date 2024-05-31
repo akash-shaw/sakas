@@ -1,3 +1,4 @@
+//navbar sticky and hamburger
 document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.getElementById("navbar");
     const navLinks = document.getElementById("nav-links");
@@ -53,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
+//timeline no hover for mobile devices
 document.addEventListener('DOMContentLoaded', function() {
     function applyResponsiveStyles() {
         const timelineArticle = document.querySelectorAll('.timeline-article');
@@ -75,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
+// reveal-on-scroll animation
 document.addEventListener('DOMContentLoaded', function() {
     function reveal() {
         var animate = document.querySelectorAll('.animate');
@@ -99,3 +100,44 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', reveal);
 });
 
+// plan-container scroll animation
+document.addEventListener('DOMContentLoaded', function() {
+    function revealPlans() {
+        const planContainers = document.querySelectorAll('.plan-container');
+        
+        planContainers.forEach(function(plan) {
+            const itemTop = plan.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (itemTop < windowHeight) {
+                plan.classList.add('reveal'); // Add reveal class if in viewport
+            } else {
+                plan.classList.remove('reveal'); // Remove reveal class if not in viewport
+            }
+        });
+    }
+
+    // Initial reveal check
+    revealPlans();
+
+    // Reveal plans on scroll
+    window.addEventListener('scroll', revealPlans);
+});
+// plan-container hover animation
+document.addEventListener('DOMContentLoaded', function() {
+    const planContainers = document.querySelectorAll('.plan-container');
+
+    planContainers.forEach(function(plan) {
+        plan.addEventListener('mouseenter', function() {
+            this.classList.add('plan-hover'); // Add class when hovering
+        });
+
+        plan.addEventListener('mouseleave', function() {
+            const self = this;
+            // Delay removal of the class by 0.3s
+            setTimeout(function() {
+                self.classList.remove('plan-hover'); // Remove class after delay
+            }, 300);
+        });
+    });
+});

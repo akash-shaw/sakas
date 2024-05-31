@@ -56,14 +56,53 @@ html {
 }
 
 /* Reveal-on-scroll */
-.animate{
+.animate {
   opacity: 0;
-  transition: opacity 0.4s ease-in;
-  transition-delay: 0.2s;
+  transition: opacity 0.8s ease, transform 0.4s ease;
+  transition-delay: 0.3s;
 }
-.animate.reveal{
+
+.animate.reveal {
   opacity: 1;
+  transform: translateY(0) scale(1); /* Bring back to original position and scale */
 }
+
+.animate-top {
+  transform: translateY(-40px);
+}
+
+.animate-bottom {
+  transform: translateY(40px);
+}
+
+.animate-scale {
+  transform: scale(0.8); /* Initially smaller scale */
+}
+
+
+.pricing-container .plan-container {
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(40px); /* Initially move down */
+}
+
+.pricing-container .plan-container:nth-child(1) {
+  transition-delay: 0.3s; /* Delay for the first plan */
+}
+
+.pricing-container .plan-container:nth-child(2) {
+  transition-delay: 0.5s; /* Delay for the second plan */
+}
+
+.pricing-container .plan-container:nth-child(3) {
+  transition-delay: 0.7s; /* Delay for the third plan */
+}
+
+.pricing-container .plan-container.reveal {
+  opacity: 1;
+  transform: translateY(0); /* Move back to original position */
+}
+
 
 /* navbar */
 
@@ -426,9 +465,13 @@ html {
   /* padding: 50px; */
   border-radius: 20px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-.plan-container:hover{
+.plan-container.reveal.plan-hover{
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition-delay: 0 !important;
+}
+.plan-container.reveal.plan-hover:hover{
+  transition-delay: 0 !important;
   transform: translateY(-15px);
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
 }
