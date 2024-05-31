@@ -340,8 +340,12 @@ html {
   width: 100%;
   padding: 5em 20px 0 20px;
   border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .pricing-heading{
+  width: 70vw;
   border: 2px solid red;
 }
 .pricing-container{
@@ -728,6 +732,11 @@ footer{
   }
 }
 @media only screen and (max-width: 650px) {
+  .about-heading, .workflow-heading, .pricing-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .workflow-timeline{
     max-width: 350px;
   }
