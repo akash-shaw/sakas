@@ -147,15 +147,17 @@ html {
 #about{
     border: 2px solid red;
     margin: 100px 0 0 0;
-    width: 70vw;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 20px;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     /* height: 80vh; */
 }
 
 .about-content{
-    width: 50%;
+    width: 100%;
     border: 2px solid green;
 }
 .heading{
@@ -171,9 +173,9 @@ html {
 }
 
 .about-svg{
-    height: 45vh;
+  width: 40%;
     border: 2px solid blue;
-    margin: 0 0 0 5vw; 
+    margin: 0 0 0 60px; 
 }
 
 
@@ -300,7 +302,8 @@ html {
 
 #pricing{
   /* margin: 100px 0 0 0; */
-  width: 70vw;
+  width: 100%;
+  padding: 0 20px;
   border: 2px solid red;
 }
 .pricing-heading{
@@ -309,11 +312,15 @@ html {
 .pricing-container{
   margin-top: 50px;
   display: flex;
+  gap: 30px;
   justify-content: center ;
+  /* align-items: center; */
 }
 .plan-container{
-  width: fit-content;
-  margin: 35px;
+  width: 100%;
+  max-width: 300px;
+  /* width: fit-content; */
+  /* margin: 35px; */
   border: 2px solid var(--primary-color);
   /* padding: 50px; */
   border-radius: 20px;
@@ -355,12 +362,13 @@ html {
 /* contact */
 
 #contact{
-  width: 70vw;
+  width: 100%;
   margin: 150px 0 0 0;
   border: 2px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 20px;
 }
 
 .contact-heading{
@@ -370,8 +378,11 @@ html {
 
 /* form */
 form{
-  width: 50%;
+  /* max-width: 1200px; */
+  width: 100%;
+  max-width: 600px;
   margin-top: 80px;
+  border: 2px solid green;
 }
 .inputBox {
   display: flex;
@@ -463,14 +474,14 @@ footer{
   justify-content: space-between;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 .footer-heading{
   margin-bottom: 10px !important;
   /* border: 2px solid green; */
 }
 .footer-section {
-  /* border: 2px solid red; */
+  border: 2px solid red;
   /* flex: 1; */
   min-width: 200px;
   margin: 10px 0;
@@ -543,3 +554,42 @@ footer{
   color: grey;
 }
 
+
+
+@media only screen and (max-width: 450px) {
+  body{
+    background-color: lightblue;
+  }
+
+
+
+  /* contact */
+  .inputBox{
+    flex-direction: column;
+  }
+  .inputBox input{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px){
+
+    /* about */
+    .about-svg{
+      display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+  /* pricing */
+  .pricing-container{
+    flex-direction: column;
+    align-items: center;
+  }
+   
+  /* footer */
+  .footer-container{
+    flex-direction: column;
+  }
+}
