@@ -73,3 +73,29 @@ document.addEventListener('DOMContentLoaded', function() {
     // Listen for resize events
     window.addEventListener('resize', applyResponsiveStyles);
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    function reveal() {
+        var animate = document.querySelectorAll('.animate');
+        
+        animate.forEach(function(item) {
+            var itemTop = item.getBoundingClientRect().top;
+            var windowHeight = window.innerHeight;
+            
+            if (itemTop < windowHeight-200) {
+                item.classList.add('reveal');
+            } else {
+                item.classList.remove('reveal');
+            }
+        });
+    }
+
+    // Call reveal initially
+    reveal();
+
+    // Call reveal on scroll
+    window.addEventListener('scroll', reveal);
+});
+
