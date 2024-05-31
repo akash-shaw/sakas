@@ -3,7 +3,14 @@
     padding: 0;  
     box-sizing: border-box;
 }
-
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
 body,
 html {
   margin: 0;
@@ -100,6 +107,7 @@ html {
     width: 100vw;
     height: 100vh;
     display: flex;
+    gap: 50px;
     justify-content: center;
     align-items: center;
     border: 5px solid green;
@@ -108,21 +116,31 @@ html {
 
 .home-content{
     border: 2px solid black;
-    height: min-content;
 }
-
+.home-svg-container{
+  height: 100%;
+  width: 50%;
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
 .home-svg{
-    height: 70vh;
-    width: auto;
+    /* height: 100%; */
+    max-height: 70vh;
+    max-width: 100%;
     border: 2px solid blue;
-    margin: 0 50px 0 50px;
+    /* margin: 0 50px 0 50px; */
 }
 
 .home-content{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 40vw;
+    width: 50%;
+    /* max-width: 500px; */
+    /* margin: 0 15vw 0 0; */
+    /* width: 40vw; */
     /* margin-bottom: 100px; */
 }
 
@@ -141,8 +159,19 @@ html {
 
 .home-text{
     border: 2px solid green;
-    width: 80%;
-    font-size: 1.2rem;
+    width: 100%;
+    font-size: 1.8rem;
+    color: rgb(119, 119, 119, 0.8);
+}
+
+.btn.home-btn{
+  padding: 15px 20px;
+  margin-top: 20px;
+  width: 150px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -561,11 +590,19 @@ footer{
 
 
 @media only screen and (max-width: 450px) {
-  body{
-    background-color: lightblue;
+  /* home` */
+  .home-heading{
+    margin: 0 0 10px 0;
   }
-
-
+  .home-heading-1{
+    font-size: 1.5rem;
+  }
+  .home-heading-2{
+    font-size: 2.2rem;
+  }
+  .home-text{
+    font-size: 1.5rem;
+  }
 
   /* contact */
   .inputBox{
@@ -582,20 +619,6 @@ footer{
     .about-svg{
       display: none;
     }
-}
-
-@media only screen and (max-width: 800px) {
-
-  /* pricing */
-  .pricing-container{
-    flex-direction: column;
-    align-items: center;
-  }
-   
-  /* footer */
-  .footer-container{
-    flex-direction: column;
-  }
 }
 
 
@@ -655,5 +678,40 @@ footer{
   .navbar {
     padding: 10px;
     margin: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  /* home */
+
+  #home{
+    gap: 0;
+    flex-direction: column;
+    padding: 0;
+  }
+  .home-svg-container{
+    width: 100%;
+    justify-content: center;
+    height: 60vh;
+  }
+  .home-svg{
+    height: 100%;
+    width: 100%;
+  }
+  .home-content{
+    width: 100%;
+    padding: 0 10px 50px 20px;
+  }
+
+  /* pricing */
+  .pricing-container{
+    flex-direction: column;
+    align-items: center;
+  }
+   
+  /* footer */
+  .footer-container{
+    flex-direction: column;
   }
 }
