@@ -52,3 +52,24 @@ document.addEventListener('DOMContentLoaded', function() {
         stickNavbar();
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    function applyResponsiveStyles() {
+        const timelineArticle = document.querySelectorAll('.timeline-article');
+
+        timelineArticle.forEach(timelineArticle => {
+            if (window.innerWidth > 650) {
+                timelineArticle.classList.add('do-hover');
+            } else {
+                timelineArticle.classList.remove('do-hover');
+            }
+        });
+    }
+
+    // Apply styles on initial load
+    applyResponsiveStyles();
+
+    // Listen for resize events
+    window.addEventListener('resize', applyResponsiveStyles);
+});

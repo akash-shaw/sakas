@@ -316,12 +316,18 @@ html {
 .content-box:hover{
   box-shadow: 3px 3px 5px 0px #555;
 }
-.timeline-article-bottom .content-box:hover{
+.timeline-article-bottom.do-hover .content-box:hover{
   transform: translateY(-10px);
 }
-.timeline-article-top .content-box:hover{
+.timeline-article-top.do-hover .content-box:hover{
   transform: translateY(10px);
 }
+/* .no-hover .timeline-article-bottom .content-box:hover{
+  transform: none;
+}
+.no-hover .timeline-article-top .content-box:hover{
+  transform: none;
+} */
 .timeline-article-top .content-box:before {
   content: " ";
   position:absolute; 
