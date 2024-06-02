@@ -919,6 +919,18 @@ footer{
   .footer-container{
     flex-direction: column;
   }
+  
+  /* go to top */
+  #gotop{
+    bottom: 20px;
+    right: 20px;
+  }
+  #gotop::after{
+    display: none;
+  }
+  #gotop:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 }
 
 /* workflow */
