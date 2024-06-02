@@ -105,6 +105,23 @@ html {
   transform: translateY(0); /* Move back to original position */
 }
 
+/* oscillation animation */
+.oscillate{
+  transform: translateY(0);
+  animation: oscillation 2s infinite alternate;    
+}
+@keyframes oscillation{
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* go-up-button */
 #gotop{
   cursor: pointer;
