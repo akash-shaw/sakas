@@ -141,3 +141,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+//to top button
+document.addEventListener('DOMContentLoaded', function() {
+    const gotopButton = document.getElementById("gotop");
+  
+    window.addEventListener('scroll', function() {
+      const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+      const viewportHeight = window.innerHeight*1.5;
+  
+      if (scrollPosition > viewportHeight) {
+        gotopButton.classList.add("active");
+      } else {
+        gotopButton.classList.remove("active");
+      }
+    });
+  
+    gotopButton.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
+  
