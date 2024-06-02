@@ -685,7 +685,7 @@ footer{
   color: var(--primary-color);
 
 }
-.contact-info p span, .contact-info p a{
+.contact-info p a{
   margin-left: 5px;
 }
 .footer-section p, .footer-section a {
