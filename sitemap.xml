@@ -9,7 +9,23 @@
 
 <url>
   <loc>https://sakasstrategies.netlify.app/</loc>
-  <lastmod>2024-06-06T07:55:38+00:00</lastmod>
+  <lastmod>2024-06-23T19:22:44+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://sakasstrategies.netlify.app/terms-and-conditions</loc>
+  <lastmod>2024-06-23T19:22:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sakasstrategies.netlify.app/privacy</loc>
+  <lastmod>2024-06-23T19:22:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sakasstrategies.netlify.app/refund-and-cancellation</loc>
+  <lastmod>2024-06-23T19:22:44+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
