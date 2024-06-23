@@ -137,7 +137,7 @@ html {
   right: 20px;
   width: 0;
   height: 0;
-  font-size: 0;
+  font-size: 0; /* TODO font size<12px causes seo issues */
   transition: all 0.3s ease;
 }
 #gotop.active{
